@@ -9,10 +9,14 @@ type Address struct {
 }
 
 type User struct {
-	id      string  `bson:"_id,omitempty"`
-	name    string  `bson:"name"`
-	email   string  `bson:"email"`
-	phone   string  `bson:"phone"`
-	profile string  `bson:"profile"`
-	address Address `bson:"address"`
+	id        string   `bson:"_id,omitempty"`
+	name      string   `bson:"name"`
+	email     string   `bson:"email"`
+	phone     string   `bson:"phone"`
+	profile   string   `bson:"profile"`
+	address   Address  `bson:"address"`
+	rating    float32  `bson:"rating"`
+	ratecount int32    `bson:"ratecount"`
+	wishlist  []string `bson:"wishlist"`
+	products  []string `bson:"products"`
 }
