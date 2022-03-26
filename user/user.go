@@ -1,5 +1,7 @@
 package user
 
+import "go.mongodb.org/mongo-driver/bson/primitive"
+
 type Address struct {
 	country  string `bson:"country"`
 	division string `bson:"division"`
@@ -19,4 +21,6 @@ type User struct {
 	ratecount int32    `bson:"ratecount"`
 	wishlist  []string `bson:"wishlist"`
 	products  []string `bson:"products"`
+	createdAt primitive.DateTime `bson:"createdAt"`
+	updatedAt primitive.DateTime `bson:"updatedAt"`
 }
