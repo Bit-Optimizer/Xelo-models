@@ -9,7 +9,7 @@ import (
 )
 
 // GetUserFromFirebase takes grpc metadata and fetches the user from firebase
-func GetUserFromFirebase(ctx context.Context, a *auth.Client) (*auth.Token, error) {
+func GetUserFromFirebase(ctx context.Context, a auth.Client) (*auth.Token , error) {
 	md, ok := metadata.FromIncomingContext(ctx)
 	if !ok {
 		return nil, fmt.Errorf("not able to extract metadata")
